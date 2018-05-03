@@ -12,6 +12,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
+import { TeamComponent } from './team/team.component';
+import { CompetitionComponent } from './competition/competition.component';
+import { PodiumComponent } from './podium/podium.component';
+
 
 const routes: Routes = [
   { path: '', component: AboutComponent },
@@ -21,6 +25,9 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent },
   { path: 'account', component: AccountComponent, canActivate: [AuthGuardLogin] },
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuardAdmin] },
+  { path: 'team', component: TeamComponent },
+  { path: 'podium', component: PodiumComponent },
+  { path: 'competition', component: CompetitionComponent },
   { path: 'notfound', component: NotFoundComponent },
   { path: '**', redirectTo: '/notfound' },
 ];
@@ -30,4 +37,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 
-export class RoutingModule {}
+export class RoutingModule { }
