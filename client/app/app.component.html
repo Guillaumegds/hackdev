@@ -1,9 +1,9 @@
 <div class="container">
 
   <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
-      <div class="navbar-header">
-          <a class="navbar-brand" href="#">The HackDev'</a>
-        </div>
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">The HackDev'</a>
+    </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -17,22 +17,22 @@
         </li>
         <li class="nav-item">
           <a routerLink="/cats" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-            <i class="fa fa-home"></i> Ranking
+            <i class="fa fa-list"></i> Ranking
           </a>
         </li>
         <li class="nav-item">
           <a routerLink="/team" class="nav-link" routerLinkActive="active">
-            <i class="fa fa-list"></i> Team
+            <i class="fa fa-street-view"></i> Team
           </a>
         </li>
         <li class="nav-item">
           <a routerLink="/competition" class="nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
-            <i class="fa fa-sign-in"></i> Competition
+            <i class="fa fa-gamepad"></i> Competition
           </a>
         </li>
         <li class="nav-item">
           <a routerLink="/podium" class="nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
-            <i class="fa fa-user-plus"></i> Podium
+            <i class="fa fa-trophy"></i> Podium
           </a>
         </li>
         <li class="nav-item">
@@ -49,12 +49,7 @@
           <a routerLink="/logout" class="nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
             <i class="fa fa-sign-out"></i> Logout
           </a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/result" class="nav-link" routerLinkActive="active">
-            <i class="fa fa-list"></i> Result
-          </a>
-        </li>
+
       </ul>
     </div>
   </nav>
