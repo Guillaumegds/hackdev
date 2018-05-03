@@ -24,3 +24,12 @@ body {
   text-align: center;
   margin-top: 20px;
 }
+.hackers {
+  max-height: 50px;
+}
+.carousel {
+  margin-top: 10px;
+}
+.carousel-item.carousel-caption {
+  margin-top: 80px;
+}
