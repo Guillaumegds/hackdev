@@ -99,17 +99,17 @@
       <tbody *ngIf="!isEditing">
         <tr *ngFor="let cat of cats">
           <td>{{ cat.name }}</td>
-          <td>{{ cat.age }}</td>
           <td>{{ cat.weight }}</td>
+          <td>{{ cat.age }}</td>
           <td>
             <button class="btn btn-sm btn-primary" (click)="enableEditing(cat)">
               <i class="fa fa-pencil"></i> Edit</button>
-            <button class="btn btn-sm btn-danger" (click)="deleteCat(cat)">
+            <button class="btn btn-sm btn-warning" (click)="deleteCat(cat)">
               <i class="fa fa-trash"></i> Delete</button>
-            <button class="btn btn-sm btn-primary" (click)="enableEditing(cat)">
-              <i class="fa fa-pencil"></i> Win</button>
-            <button class="btn btn-sm btn-primary" (click)="enableEditing(cat)">
-              <i class="fa fa-pencil"></i> Loose</button>
+            <button class="btn btn-sm btn-success" (click)="enableEditing(cat)">
+              <i class="fa fa-trophy"></i> Win</button>
+            <button class="btn btn-sm btn-danger" (click)="enableEditing(cat)">
+              <i class="fa fa-bomb"></i> Loose</button>
 
           </td>
         </tr>
@@ -119,8 +119,8 @@
           <td colspan="4">
             <form class="form-inline" #form="ngForm" (ngSubmit)="editCat(cat)">
               <input class="form-control mr-2" type="text" name="name" [(ngModel)]="cat.name" placeholder="Name" required>
-              <input class="form-control mr-2" type="number" name="weight" [(ngModel)]="cat.age" placeholder="Weight" min="0" required>
-              <input class="form-control mr-2" type="number" name="age" [(ngModel)]="cat.weight" placeholder="Age" step="any" min="0" required>
+              <input class="form-control mr-2" type="text" name="weight" [(ngModel)]="cat.age" placeholder="Weight" required>
+              <input class="form-control mr-2" type="text" name="age" [(ngModel)]="cat.weight" placeholder="Age" step="any" required>
               <button class="btn btn-sm btn-primary mr-2" type="submit" [disabled]="!form.form.valid">
                 <i class="fa fa-floppy-o"></i> Save</button>
               <button class="btn btn-sm btn-warning" (click)="cancelEditing()">
@@ -138,8 +138,8 @@
   <div class="card-body">
     <form class="form-inline" [formGroup]="addCatForm" (ngSubmit)="addCat()">
       <input class="form-control mr-2" type="text" name="name" formControlName="name" placeholder="Pays">
-      <input class="form-control mr-2" type="text" name="weight" formControlName="weight" placeholder="Team" step="any">
-      <input class="form-control mr-2" type="text" name="age" formControlName="age" placeholder="Score">
+      <input class="form-control mr-2" type="text" name="age" formControlName="weight" placeholder="Team" step="any">
+      <input class="form-control mr-2" type="text" name="weight" formControlName="age" placeholder="Score">
       <button class="btn btn-primary" type="submit" [disabled]="!addCatForm.valid">
         <i class="fa fa-floppy-o"></i> Add</button>
     </form>
