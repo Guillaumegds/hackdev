@@ -13,18 +13,23 @@
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/cats" class="nav-link" routerLinkActive="active">
-            <i class="fa fa-list"></i> Cats
+          <a routerLink="/cats" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <i class="fa fa-home"></i> Cat
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/login" class="nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
-            <i class="fa fa-sign-in"></i> Login
+          <a routerLink="/team" class="nav-link" routerLinkActive="active">
+            <i class="fa fa-list"></i> Team
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/register" class="nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
-            <i class="fa fa-user-plus"></i> Register
+          <a routerLink="/competition" class="nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
+            <i class="fa fa-sign-in"></i> Competition
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/podium" class="nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
+            <i class="fa fa-user-plus"></i> Podium
           </a>
         </li>
         <li class="nav-item">

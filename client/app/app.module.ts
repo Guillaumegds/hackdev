@@ -17,6 +17,9 @@ import { LogoutComponent } from './logout/logout.component';
 import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { TeamComponent } from './team/team.component';
+import { CompetitionComponent } from './competition/competition.component';
+import { PodiumComponent } from './podium/podium.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -33,6 +36,9 @@ export function tokenGetter() {
     AccountComponent,
     AdminComponent,
     NotFoundComponent,
+    TeamComponent,
+    CompetitionComponent,
+    PodiumComponent,
   ],
   imports: [
     RoutingModule,
