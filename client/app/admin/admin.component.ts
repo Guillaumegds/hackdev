@@ -60,7 +60,10 @@ export class AdminComponent implements OnInit {
       () => this.isLoading = false,
     );
   }
-
+  enableEditing(cat: Cat) {
+    this.isEditing = true;
+    this.cat = cat;
+  }
 
   getUsers() {
     this.userService.getUsers().subscribe(
