@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },
   { path: 'account', component: AccountComponent, canActivate: [AuthGuardLogin] },
-  { path: 'admin', component: AdminComponent, canActivate: [AuthGuardAdmin] },
+  { path: 'admin', component: AdminComponent },
   { path: 'team', component: TeamComponent },
   { path: 'podium', component: PodiumComponent },
   { path: 'competition', component: CompetitionComponent },
