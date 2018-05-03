@@ -14,7 +14,7 @@
     "build": "ng build --prod",
     "start": "node dist/server/app.js",
     "predev": "tsc -p server",
-    "dev": "concurrently \"mongod\" \"ng serve -pc proxy.conf.json --open\" \"tsc -w -p server\" \"nodemon dist/server/app.js\"",
+    "dev": "concurrently \"ng serve -pc proxy.conf.json --open\" \"tsc -w -p server\" \"nodemon dist/server/app.js\"",
     "prod": "concurrently \"mongod\" \"ng build -aot -prod && tsc -p server && node dist/server/app.js\"",
     "lint": "npm run lint:style && npm run lint:front && npm run lint:html && npm run lint:back",
     "lint:style": "stylelint 'client/**/*{.css,.scss}'",
