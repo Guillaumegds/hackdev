@@ -3,8 +3,24 @@
 body {
   margin-top: 15px;
   margin-bottom: 10px;
+  background-color: black;
 }
 
 .input-group {
   margin-bottom: 15px;
+}
+.navbar-dark {
+  background-color:#499833;
+}
+.year {
+  color: #499833;
+  font-size: 26px;
+}
+.yearp {
+  color: #499833;
+  font-size: 22px;
+}
+.youtube{
+  text-align: center;
+  margin-top: 20px;
 }
