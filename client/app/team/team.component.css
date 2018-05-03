@@ -12,3 +12,14 @@
 .footer-links li + li {margin-left: 1rem;}
 /* Bug Bootstrap V4.0.6 - Mobile - SCSS _navbar*/ 
 .navbar {display: block;}
+.imgheight {
+   height: 360px;
+}
+.row {
+    margin-top: 20px;
+}h2 {
+    color: white;
+}
+.card h3 {
+    font-size : 26px;
+}
