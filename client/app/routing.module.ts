@@ -15,6 +15,7 @@ import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 import { TeamComponent } from './team/team.component';
 import { CompetitionComponent } from './competition/competition.component';
 import { PodiumComponent } from './podium/podium.component';
+import { ResultComponent } from './result/result.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'podium', component: PodiumComponent },
   { path: 'competition', component: CompetitionComponent },
   { path: 'notfound', component: NotFoundComponent },
+  { path: 'result', component: ResultComponent },
   { path: '**', redirectTo: '/notfound' },
 ];
 
