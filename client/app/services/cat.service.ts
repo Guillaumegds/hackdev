@@ -33,4 +33,7 @@ export class CatService {
     return this.http.delete(`/api/cat/${cat._id}`, { responseType: 'text' });
   }
 
+  // winEditing(cat: Cat): Observable<string> {
+  //   return this.http.post(`/api/cat/${cat._id}`, { responseType: 'text' });
+
 }

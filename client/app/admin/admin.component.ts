@@ -13,7 +13,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   templateUrl: './admin.component.html',
 })
 export class AdminComponent implements OnInit {
-
+  message = '';
   users: User[] = [];
   isLoading = true;
   cat = new Cat();
@@ -109,5 +109,18 @@ export class AdminComponent implements OnInit {
     }
   }
 
+  winEditing(val) {
+    let i = 0;
+    const numbers = new Array();
+    numbers[i] = val;
+    i++;
+    this.message = i;
+    console.log(i);
+
+
+  }
 }
+
+
+
 

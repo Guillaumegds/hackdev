@@ -100,15 +100,15 @@
         <tr *ngFor="let cat of cats">
           <td>{{ cat.name }}</td>
           <td>{{ cat.weight }}</td>
-          <td>{{ cat.age }}</td>
+          <td>{{ message }}</td>
           <td>
             <button class="btn btn-sm btn-primary" (click)="enableEditing(cat)">
               <i class="fa fa-pencil"></i> Edit</button>
             <button class="btn btn-sm btn-warning" (click)="deleteCat(cat)">
               <i class="fa fa-trash"></i> Delete</button>
-            <button class="btn btn-sm btn-success" (click)="enableEditing(cat)">
+            <button class="btn btn-sm btn-success" (click)="winEditing(cat)">
               <i class="fa fa-trophy"></i> Win</button>
-            <button class="btn btn-sm btn-danger" (click)="enableEditing(cat)">
+            <button class="btn btn-sm btn-danger" (click)="looseEditing(cat)">
               <i class="fa fa-bomb"></i> Loose</button>
 
           </td>
@@ -139,7 +139,7 @@
     <form class="form-inline" [formGroup]="addCatForm" (ngSubmit)="addCat()">
       <input class="form-control mr-2" type="text" name="name" formControlName="name" placeholder="Pays">
       <input class="form-control mr-2" type="text" name="age" formControlName="weight" placeholder="Team" step="any">
-      <input class="form-control mr-2" type="text" name="weight" formControlName="age" placeholder="Score">
+      <input class="form-control mr-2" type="number" name="weight" formControlName="age" placeholder="Score">
       <button class="btn btn-primary" type="submit" [disabled]="!addCatForm.valid">
         <i class="fa fa-floppy-o"></i> Add</button>
     </form>

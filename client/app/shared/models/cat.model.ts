@@ -1,6 +1,6 @@
 export class Cat {
   _id?: string;
   name?: string;
-  weight?: string;
+  weight?: number;
   age?: string;
 }
