@@ -27,13 +27,14 @@ export class AdminComponent implements OnInit {
 
 
   constructor(public auth: AuthService,
-    private catService: CatService,
-    public toast: ToastComponent,
-    private formBuilder: FormBuilder,
-    private userService: UserService) { }
+              private catService: CatService,
+              public toast: ToastComponent,
+              private formBuilder: FormBuilder,
+              private userService: UserService) { }
 
   ngOnInit() {
     this.getUsers();
+    this.getCats();
     this.addCatForm = this.formBuilder.group({
       name: this.name,
       age: this.age,
@@ -51,6 +52,15 @@ export class AdminComponent implements OnInit {
       error => console.log(error),
     );
   }
+
+  getCats() {
+    this.catService.getCats().subscribe(
+      data => this.cats = data,
+      error => console.log(error),
+      () => this.isLoading = false,
+    );
+  }
+
 
   getUsers() {
     this.userService.getUsers().subscribe(
@@ -71,62 +81,6 @@ export class AdminComponent implements OnInit {
   }
 
 
-  // export class CatsComponent implements OnInit {
-
-  //   cat = new Cat();
-  //   cats: Cat[] = [];
-  //   isLoading = true;
-  //   isEditing = false;
-
-  //   addCatForm: FormGroup;
-  //   name = new FormControl('', Validators.required);
-  //   age = new FormControl('', Validators.required);
-  //   weight = new FormControl('', Validators.required);
-
-  //   constructor(private catService: CatService,
-  //               private formBuilder: FormBuilder,
-  //               public toast: ToastComponent) { }
-
-  //   ngOnInit() {
-  //     this.getCats();
-  //     this.addCatForm = this.formBuilder.group({
-  //       name: this.name,
-  //       age: this.age,
-  //       weight: this.weight,
-  //     });
-  //   }
-
-  //   getCats() {
-  //     this.catService.getCats().subscribe(
-  //       data => this.cats = data,
-  //       error => console.log(error),
-  //       () => this.isLoading = false,
-  //     );
-  //   }
-
-  //   addCat() {
-  //     this.catService.addCat(this.addCatForm.value).subscribe(
-  //       (res) => {
-  //         this.cats.push(res);
-  //         this.addCatForm.reset();
-  //         this.toast.setMessage('item added successfully.', 'success');
-  //       },
-  //       error => console.log(error),
-  //     );
-  //   }
-
-  //   enableEditing(cat: Cat) {
-  //     this.isEditing = true;
-  //     this.cat = cat;
-  //   }
-
-  //   cancelEditing() {
-  //     this.isEditing = false;
-  //     this.cat = new Cat();
-  //     this.toast.setMessage('item editing cancelled.', 'warning');
-  //     // reload the cats to reset the editing
-  //     this.getCats();
-  //   }
 
   editCat(cat: Cat) {
     this.catService.editCat(cat).subscribe(
