@@ -109,13 +109,18 @@ export class AdminComponent implements OnInit {
     }
   }
 
-  winEditing(val) {
-    let i = 0;
-    const numbers = new Array();
-    numbers[i] = val;
-    i++;
-    this.message = i;
-    console.log(i);
+  winEditing(cat: Cat) {
+    if (!cat.win) {
+      cat.win = 0;
+    }
+    cat.win += 1;
+    this.catService.editCat(cat);
+    // let i = 0;
+    // const numbers = new Array();
+    // numbers[i] = val;
+    // i++;
+    // this.message = i;
+    // console.log(i);
 
 
   }
