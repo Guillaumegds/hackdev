@@ -3,33 +3,75 @@
 body {
   margin-top: 15px;
   margin-bottom: 10px;
-  background-image: url("https://media.giphy.com/media/11UhXwm8Ipd9C/giphy.gif");
+  background-image: url("https://wallpaperhdzone.com/wp-content/uploads/2017/02/android-gif-wallpaper6.jpg");
+  background-color: black;
 }
 
 .input-group {
   margin-bottom: 15px;
 }
+
 .navbar-dark {
-  background-color:#499833;
+  background-color: #499833;
 }
+
 .year {
   color: #499833;
   font-size: 26px;
 }
+
 .yearp {
   color: #499833;
   font-size: 22px;
 }
-.youtube{
+
+.youtube {
   text-align: center;
   margin-top: 20px;
 }
+
 .hackers {
   max-height: 50px;
 }
+
 .carousel {
   margin-top: 10px;
 }
+
 .carousel-item.carousel-caption {
   margin-top: 80px;
+}
+
+/* Page Heading */
+
+.my-4 {
+  color: white;
+  background-color: #00000000;
+  font-family: 'Titan One', cursive;
+}
+
+/* Projects */
+
+h3,
+p {
+  color: white;
+  font-weight: bold;
+  background-color: #00000000;
+  font-family: 'Pangolin', cursive;
+}
+
+/* Footer */
+
+.page-footer {
+  background-color: #000000;
+  margin-top: 20px;
+}
+
+.footer {
+  color: white;
+}
+
+.container a {
+  color: white;
+  text-decoration: none;
 }
