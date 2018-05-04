@@ -27,10 +27,10 @@ export class AdminComponent implements OnInit {
 
 
   constructor(public auth: AuthService,
-              private catService: CatService,
-              public toast: ToastComponent,
-              private formBuilder: FormBuilder,
-              private userService: UserService) { }
+    private catService: CatService,
+    public toast: ToastComponent,
+    private formBuilder: FormBuilder,
+    private userService: UserService) { }
 
   ngOnInit() {
     this.getUsers();
@@ -114,7 +114,9 @@ export class AdminComponent implements OnInit {
       cat.win = 0;
     }
     cat.win += 1;
-    this.catService.editCat(cat);
+    this.catService.editCat(cat).subscribe(() => {
+      console.log('pute');
+    }, error => console.log(error));
     // let i = 0;
     // const numbers = new Array();
     // numbers[i] = val;
