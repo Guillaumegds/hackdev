@@ -3,5 +3,6 @@ export class Cat {
   name?: string;
   weight?: number;
   age?: string;
+  team?: string;
   win?: number;
 }

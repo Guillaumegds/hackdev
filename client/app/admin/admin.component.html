@@ -99,7 +99,7 @@
       <tbody *ngIf="!isEditing">
         <tr *ngFor="let cat of cats">
           <td>{{ cat.name }}</td>
-          <td>{{ cat.weight }}</td>
+          <td>{{ cat.team }}</td>
           <td>{{ cat.win }}</td>
           <td>
             <button class="btn btn-sm btn-primary" (click)="enableEditing(cat)">
@@ -119,8 +119,8 @@
           <td colspan="4">
             <form class="form-inline" #form="ngForm" (ngSubmit)="editCat(cat)">
               <input class="form-control mr-2" type="text" name="name" [(ngModel)]="cat.name" placeholder="Name" required>
-              <input class="form-control mr-2" type="text" name="weight" [(ngModel)]="cat.age" placeholder="Weight" required>
-              <input class="form-control mr-2" type="text" name="age" [(ngModel)]="cat.weight" placeholder="Age" step="any" required>
+              <input class="form-control mr-2" type="text" name="team" [(ngModel)]="cat.team" placeholder="Team" step="any" required>
+              <input class="form-control mr-2" type="text" name="win" [(ngModel)]="cat.win" placeholder="Score" required>
               <button class="btn btn-sm btn-primary mr-2" type="submit" [disabled]="!form.form.valid">
                 <i class="fa fa-floppy-o"></i> Save</button>
               <button class="btn btn-sm btn-warning" (click)="cancelEditing()">
@@ -138,8 +138,8 @@
   <div class="card-body">
     <form class="form-inline" [formGroup]="addCatForm" (ngSubmit)="addCat()">
       <input class="form-control mr-2" type="text" name="name" formControlName="name" placeholder="Pays">
-      <input class="form-control mr-2" type="text" name="age" formControlName="weight" placeholder="Team" step="any">
-      <input class="form-control mr-2" type="number" name="weight" formControlName="age" placeholder="Score">
+      <input class="form-control mr-2" type="text" name="team" formControlName="team" placeholder="Team" step="any">
+      <input class="form-control mr-2" type="number" name="win" formControlName="win" placeholder="Score">
       <button class="btn btn-primary" type="submit" [disabled]="!addCatForm.valid">
         <i class="fa fa-floppy-o"></i> Add</button>
     </form>

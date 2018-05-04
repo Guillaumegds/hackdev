@@ -22,8 +22,8 @@ export class AdminComponent implements OnInit {
 
   addCatForm: FormGroup;
   name = new FormControl('', Validators.required);
-  age = new FormControl('', Validators.required);
-  weight = new FormControl('', Validators.required);
+  team = new FormControl('', Validators.required);
+  win = new FormControl('', Validators.required);
 
 
   constructor(public auth: AuthService,
@@ -37,8 +37,8 @@ export class AdminComponent implements OnInit {
     this.getCats();
     this.addCatForm = this.formBuilder.group({
       name: this.name,
-      age: this.age,
-      weight: this.weight,
+      win: this.win,
+      team: this.team,
     });
   }
 

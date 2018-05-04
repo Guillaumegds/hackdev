@@ -3,6 +3,7 @@ import * as mongoose from 'mongoose';
 const catSchema = new mongoose.Schema({
   name: String,
   weight: String,
+  team: String,
   age: String,
   win: Number,
 });
