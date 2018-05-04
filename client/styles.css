@@ -60,6 +60,10 @@ p {
   font-family: 'Pangolin', cursive;
 }
 
+.text {
+  color: white;
+}
+
 /* Footer */
 
 .page-footer {
@@ -74,4 +78,25 @@ p {
 .container a {
   color: white;
   text-decoration: none;
+}
+
+/* Team */
+
+.country {
+  color: black;
+}
+
+.title-header,
+p {
+  color: black;
+}
+
+/* Carousel */
+
+.carousel-caption h3 {
+  color: white;
+}
+
+.carousel-caption .year {
+  color: #499833;
 }
