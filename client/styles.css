@@ -1,16 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  background-image: url("https://wallpaperhdzone.com/wp-content/uploads/2017/02/android-gif-wallpaper6.jpg");
   background-color: black;
 }
 
 .input-group {
   margin-bottom: 15px;
 }
-
+.navbar-expand-lg {
+  min-width: 100%;
+}
 .navbar-dark {
   background-color: #499833;
 }
@@ -32,15 +31,9 @@ body {
 
 .hackers {
   max-height: 50px;
+  padding-top: 10px;
 }
 
-.carousel {
-  margin-top: 10px;
-}
-
-.carousel-item.carousel-caption {
-  margin-top: 80px;
-}
 
 /* Page Heading */
 
@@ -91,12 +84,3 @@ p {
   color: black;
 }
 
-/* Carousel */
-
-.carousel-caption h3 {
-  color: white;
-}
-
-.carousel-caption .year {
-  color: #499833;
-}

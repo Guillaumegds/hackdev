@@ -1,1 +1,32 @@
 
+html,body{
+height:100%;}
+
+
+    /* Carousel */
+
+.carousel-caption h3 {
+    color: white;
+  }
+  
+  .carousel-caption .year {
+    color: #499833;
+  }
+  .nav-item {
+    padding-left: 100px;
+    
+  }
+  
+  .navbar-nav{
+    padding-left: 140px;
+  }
+  /* Carousel 100% Fullscreen */
+  .carousel {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .carousel-item.carousel-caption {
+    margin-top: 80px;
+  }
+   
