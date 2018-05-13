@@ -12,6 +12,8 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build --prod",
+    "ghpages": "sh deploy.sh",
+    "deploy": "angular-cli-ghpages",
     "start": "node dist/server/app.js",
     "predev": "tsc -p server",
     "dev": "concurrently \"ng serve -pc proxy.conf.json --open\" \"tsc -w -p server\" \"nodemon dist/server/app.js\"",
@@ -38,6 +40,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "@auth0/angular-jwt": "~1.1.0",
+    "angular-cli-ghpages": "^0.5.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "bootstrap": "^4.1.1",
